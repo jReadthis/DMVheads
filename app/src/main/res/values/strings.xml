@@ -1,0 +1,15 @@
+<resources>
+    <!-- string ids for registration.xml -->
+    <string name="app_name">DMV Football Heads</string>
+    <string name="submit">Submit</string>
+
+    <!-- string ids for home.xml -->
+    <string name="season_history">Football Heads History</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="register">REGISTER</string>
+    <string name="regular_season">REGULAR SEASON</string>
+    <string name="playoffs">PLAYOFFS</string>
+    <string name="statistics">STATISTICS</string>
+    <string name="passwords_not_same">Passwords don\'t match</string>
+    <string name="title_activity_regular_season">Regular Season</string>
+</resources>
