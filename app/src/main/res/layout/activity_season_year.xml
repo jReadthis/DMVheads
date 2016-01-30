@@ -14,9 +14,7 @@
         android:id="@+id/listView"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="#f5f5f5"
-        android:divider="@android:color/transparent"
+        android:divider="@null"
         android:scrollbars="none" />
-
 
 </LinearLayout>
