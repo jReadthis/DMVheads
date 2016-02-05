@@ -1,18 +1,10 @@
 package com.example.nano1.dmvheads;
 
-import android.content.Context;
+
 import android.content.Intent;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Movie;
-import android.graphics.drawable.AnimationDrawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
-import android.widget.ImageView;
-
-import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void register(View view) {
-        Intent i = new Intent(this, Register.class);
+        Intent i = new Intent(this, RegisterActivity.class);
         startActivity(i);
     }
 

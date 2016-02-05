@@ -20,7 +20,7 @@ import java.util.List;
 import cz.msebera.android.httpclient.NameValuePair;
 import cz.msebera.android.httpclient.message.BasicNameValuePair;
 
-public class Register extends AppCompatActivity implements View.OnClickListener {
+public class RegisterActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText user, pass;
     private Button mRegister;
@@ -83,7 +83,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            pDialog = new ProgressDialog(Register.this);
+            pDialog = new ProgressDialog(RegisterActivity.this);
             pDialog.setMessage("Creating User...");
             pDialog.setIndeterminate(false);
             pDialog.setCancelable(true);
@@ -139,7 +139,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener 
             // dismiss the dialog once product deleted
             pDialog.dismiss();
             if (file_url != null){
-                Toast.makeText(Register.this, file_url, Toast.LENGTH_LONG).show();
+                Toast.makeText(RegisterActivity.this, file_url, Toast.LENGTH_LONG).show();
             }
 
         }

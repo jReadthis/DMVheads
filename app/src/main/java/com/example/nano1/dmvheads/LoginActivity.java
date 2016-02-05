@@ -1,6 +1,5 @@
 package com.example.nano1.dmvheads;
 
-import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -13,13 +12,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import cz.msebera.android.httpclient.NameValuePair;
 import cz.msebera.android.httpclient.message.BasicNameValuePair;
 
@@ -52,7 +48,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
     class AttemptLogin extends AsyncTask<String, String, String> {
-
         String username;
         String password;
 
@@ -71,12 +66,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         @Override
         protected String doInBackground(String... args) {
-            // TODO Auto-generated method stub
-            // Check for success tag
             int success;
 
             try {
-                List<NameValuePair> params = new ArrayList<NameValuePair>();
+                List<NameValuePair> params = new ArrayList<>();
                 params.add(new BasicNameValuePair("username", username));
                 params.add(new BasicNameValuePair("password", password));
                 JSONObject json = jsonParser.makeHttpRequest(
@@ -92,7 +85,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     edit.putString("username", username);
                     edit.commit();
 
-                    Intent i = new Intent(LoginActivity.this, SeasonYear.class);
+                    Intent i = new Intent(LoginActivity.this, YearActivity.class);
                     finish();
                     startActivity(i);
                     return json.getString(TAG_MESSAGE);

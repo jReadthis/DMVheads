@@ -1,6 +1,5 @@
 package com.example.nano1.dmvheads;
 
-import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,19 +11,15 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class RegularSeason extends AppCompatActivity {
-
+public class RegularSeasonActivity extends AppCompatActivity {
 
     private static final String URL = "http://dmvfootballheads.x10host.com/webservice/reg_season_";
-    private static final String TAG_SUCCESS = "success";
     private static final String TAG_POS = "pos";
     private static final String TAG_POSTS = "posts";
     private static final String TAG_TEAM_NAME = "team_name";
@@ -89,10 +84,9 @@ public class RegularSeason extends AppCompatActivity {
      */
     public void updateJSONdata() {
 
-        mRegSeasonList = new ArrayList<HashMap<String, String>>();
+        mRegSeasonList = new ArrayList<>();
         JSONParser jParser = new JSONParser();
         JSONObject json = jParser.getJSONFromUrl(REG_SEASON_URL);
-
         try {
 
             mRegSeasons = json.getJSONArray(TAG_POSTS);

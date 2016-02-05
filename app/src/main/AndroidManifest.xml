@@ -21,13 +21,17 @@
             android:name=".LoginActivity"
             android:label="@string/sign_in" />
         <activity
-            android:name=".Register"
+            android:name=".RegisterActivity"
             android:label="@string/register" />
         <activity
-            android:name=".SeasonYear"
-            android:label="@string/season_history" />
-        <activity android:name=".RegularSeason"
-            android:label="@string/regular_season">
+            android:name=".YearActivity"
+            android:label="@string/season_history"/>
+        <activity android:name=".RegularSeasonActivity"
+            android:label="@string/regular_season"
+            android:parentActivityName=".YearActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.nano1.dmvheads.YearActivity"/>
         </activity>
     </application>
 
